@@ -1,0 +1,11 @@
+<section class="image-text" [class.reverse]="!imageOnLeft">
+    <div class="image-text__image">
+      <img [src]="imageUrl" [alt]="altText" />
+    </div>
+  
+    <div class="image-text__text">
+      <h2 *ngIf="title">{{ title }}</h2>
+      <p [innerText]="text"></p>
+    </div>
+  </section>
+  

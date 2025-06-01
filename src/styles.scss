@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'variables.scss' as *;
+
+
+html, body {
+    scroll-behavior: smooth;
+  }
+
+
+     .section {
+        scroll-margin-top: 200px; // gleiche Höhe wie deine Sticky Navbar
+        margin-bottom: 200px;
+
+        text-align: center;
+
+        .headline {
+            font-size: 1.6rem;
+            display: inline-block;
+            margin: 0 auto;
+        }
+      }
+
+      .headline {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 3px solid $color-primary;
+        padding-bottom: 0.5rem;
+      }
+
+      body {
+        margin: 0;
+        font-family: $font-family-base;
+        background-color: $color-background;
+      }
+      
+      .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem; // für Mobilgeräte
+      }
+    
+      .welcome-heading {
+        font-size: $font-size-heading;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 10rem;
+        margin-bottom: 0 !important;
+      }
+      
+      .welcome-subheading {
+        font-size: $font-size-subheading;
+        font-weight: 800;
+        color: $color-text-light;
+        text-align: center;
+      }
+    
+      .welcome-subheading.top-0 {
+        margin-top: 0 !important;
+      }
+
+

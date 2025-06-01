@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="logo"><img src="logo2.gif" /></div>
+
+    <div class="welcome-subheading">Dr. med. dent. Paschalis Papanikolaou</div>
+  
+    <div class="burger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <ul [class.open]="menuOpen">
+      <li><a href="#start" (click)="closeMenu()" [class.active]="activeSection === 'start'">Start</a></li>
+      <li><a href="#services" (click)="closeMenu()" [class.active]="activeSection === 'services'">Leistungen</a></li>
+    </ul>
+  </nav>
