@@ -1,14 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { register as registerSwiperElements } from 'swiper/element/bundle';
+import { RouterModule } from '@angular/router';
 
-registerSwiperElements();
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Home {
 

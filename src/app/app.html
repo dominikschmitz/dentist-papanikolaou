@@ -1,17 +1,25 @@
 <!-- Diese Ansicht bleibt immer sichtbar (Startseite) -->
-<app-navbar></app-navbar>
-<ng-container *ngIf="!isImpressumRoute">
-  <div class="wrapper">
-    <section id="start" class="section"><app-home></app-home></section>
-    <section id="services" class="section">
-      <h1 class="headline">Leistungen</h1>
-      <app-services></app-services>
-    </section>
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="modal">
+    <h2>Willkommen!</h2>
+    <p>Dies ist eine Preview Website. Bilder, Texte, Farben usw. sind nicht final. Verwendetes Bildmaterial ist lizenzfrei.</p>
+    <p>Viele Buttons oder Links sind nicht klickbar. Eine Preview-Seite dient dazu einen groben Ueberblick zu verschaffen.</p>
+    <p>Inhalte muessen zwangslaeufig ueberarbeitet werden. Das Layout kann erweitert werden.</p>
+    <button (click)="closeModal()">Schließen</button>
   </div>
+</div>
 
-  <app-footer></app-footer>
-</ng-container>
 
-<!-- Router-Outlet zeigt z. B. Impressum -->
-<router-outlet *ngIf="isImpressumRoute"></router-outlet>
+<app-quick-contact-header></app-quick-contact-header>
+<app-navbar></app-navbar>
+
+<app-sticky-panel></app-sticky-panel>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+<app-footer></app-footer>
 

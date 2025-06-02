@@ -1,3 +1,234 @@
 app-root {
     scroll-behavior: smooth;
 }
+
+.image-wrapper {
+  width: 100%;
+  height: 800px; // oder was du brauchst
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; // <- hier verschiebst du den sichtbaren Ausschnitt nach unten
+}
+
+
+.grid-container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  max-width: 80%;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  padding-bottom: 20px;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 20px 25px;
+  max-width: 90%;
+  text-align: center;
+  color: rgb(49, 48, 48);
+  font-weight: 400;
+  font-size: clamp(0.8rem, 3vw, 1.3rem);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.leistungen-wrapper {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+
+.leistungen-wrapper-container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.leistungen-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 33%;
+  left: -30%;
+  width: 150%; 
+  height: 35%;
+  background-color: #000000c4;
+  z-index: 0;
+  border-radius: 20px;
+  transform: rotate(-1deg);
+  pointer-events: none;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: rgb(24, 23, 23);
+  margin-bottom: 30px;
+}
+
+.cta-wrapper {
+  margin-top: 40px;
+}
+
+.cta-button {
+  background-color: #000000e1;
+  border: 1px solid #00000055;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 12px 24px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #000000c4;
+}
+
+
+// #########
+
+.content-container {
+  display: flex;
+  align-items: start;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 40px auto;
+  position: relative;
+  background-color: #3eb48911;
+}
+
+/* Text nimmt ca. 55% Breite */
+.text-wrapper {
+  flex: 0 0 50%;
+}
+
+.text-wrapper h2 {
+  margin-top: 25px;
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+
+.text-wrapper p {
+  line-height: 1.6;
+  margin: 0 10px 15px 0;
+  font-size: 1.2rem;
+}
+
+.text-wrapper ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+}
+
+/* Responsive für kleine Bildschirme */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .image-wrapper, .text-wrapper {
+    flex: none;
+    width: 100%;
+  }
+
+  .text-wrapper {
+    padding-top: 20px;
+  }
+}
+
+.team-button-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-button {
+  display: inline-block;
+  background-color: #000000e1;
+  border: 1px solid #00000055;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.team-button:hover {
+  background-color: #000000c4;
+}
+
+//##########
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.modal button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: black;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background: rgba(0, 0, 0, 0.884);
+}
+

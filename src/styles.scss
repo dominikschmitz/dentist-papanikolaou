@@ -3,8 +3,14 @@
 
 
 html, body {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 
      .section {
@@ -39,24 +45,3 @@ html, body {
         margin: 0 auto;
         padding: 0 1rem; // für Mobilgeräte
       }
-    
-      .welcome-heading {
-        font-size: $font-size-heading;
-        font-weight: 800;
-        text-align: center;
-        margin-top: 10rem;
-        margin-bottom: 0 !important;
-      }
-      
-      .welcome-subheading {
-        font-size: $font-size-subheading;
-        font-weight: 800;
-        color: $color-text-light;
-        text-align: center;
-      }
-    
-      .welcome-subheading.top-0 {
-        margin-top: 0 !important;
-      }
-
-

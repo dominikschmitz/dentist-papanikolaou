@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnDestroy } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { Router, RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule]
 })
 export class Navbar implements AfterViewInit {
-  menuOpen = false;
+  scrolled = false;
+  mobileMenuOpen = false;
   activeSection = '';
 
   constructor(private router: Router) {
@@ -20,12 +21,13 @@ export class Navbar implements AfterViewInit {
     });
   }
 
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 50;
   }
 
-  closeMenu() {
-    this.menuOpen = false;
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
   ngAfterViewInit() {

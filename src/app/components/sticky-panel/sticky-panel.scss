@@ -1,0 +1,77 @@
+.left-sticky-panel {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #107ACA;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.44);
+  border-radius: 0 12px 12px 0;
+}
+
+.logo-wrapper img {
+  width: 80px;
+  height: auto;
+}
+
+.sticky-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sticky-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #fff;
+  color: #107ACA;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sticky-btn:hover {
+  background-color: #329c78;
+}
+
+@media (max-width: 768px) {
+  .left-sticky-panel {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    width: 100%;
+    max-width: 480px;
+    justify-content: space-around;
+    border-radius: 12px 12px 0 0;
+    border-right: none;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    background-color: #107ACA;
+  }
+
+  .sticky-buttons {
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  .logo-wrapper img {
+    width: 100px;
+  }
+
+  .sticky-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
+
