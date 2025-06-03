@@ -1,0 +1,21 @@
+<p-card class="team-card">
+  <img [src]="imageUrl" [alt]="name" class="team-image" />
+
+  <div class="team-content">
+    <h3 class="team-name">{{ name }}</h3>
+    <p class="team-title">{{ title }}</p>
+
+    <ul *ngIf="qualifications?.length" class="team-qualifications">
+      <li *ngFor="let q of qualifications">{{ q }}</li>
+    </ul>
+
+    <a
+      *ngIf="showResumeButton && resumeUrl"
+      [href]="resumeUrl"
+      target="_blank"
+      class="p-button p-button-sm p-button-outlined team-resume-button"
+    >
+      Lebenslauf
+    </a>
+  </div>
+</p-card>

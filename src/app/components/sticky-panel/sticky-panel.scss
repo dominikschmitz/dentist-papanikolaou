@@ -38,8 +38,10 @@
   transition: background-color 0.3s ease;
 }
 
-.sticky-btn:hover {
-  background-color: #329c78;
+.sticky-btn:active {
+  background-color: #fff;
+  color: #107ACA;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

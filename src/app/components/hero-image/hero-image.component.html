@@ -1,0 +1,25 @@
+<div class="gallery-wrapper">
+  <p-galleria
+    [value]="galleryImages"
+    [showThumbnails]="false"
+    [showItemNavigators]="false"
+    [circular]="true"
+    [autoPlay]="true"
+    [transitionInterval]="30000"
+    containerClass="custom-hero-gallery">
+
+    <ng-template pTemplate="item" let-image>
+      <div class="galleria-image-container">
+        <img [src]="image.previewImageSrc" [alt]="image.alt" />
+        <div class="image-overlay-box">
+          <h3>{{ title }}</h3>
+          <p>{{ subtitle }}</p>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="thumbnail" let-image>
+      <img [src]="image.thumbnailImageSrc" [alt]="image.alt" />
+    </ng-template>
+  </p-galleria>
+</div>

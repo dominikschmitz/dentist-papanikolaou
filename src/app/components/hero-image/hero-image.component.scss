@@ -1,0 +1,35 @@
+.image-wrapper,
+.galleria-image-container {
+  position: relative;
+  width: 1400px;
+  max-height: 600px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .image-overlay-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1rem 1.5rem;
+    color: #000000;
+
+    h3, p {
+      margin: 0;
+    }
+  }
+}
+
+:host ::ng-deep .p-galleria {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden; // optional
+}

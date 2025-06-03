@@ -1,0 +1,23 @@
+<!--<app-hero-image [images]="images" [title]="'Unsere Leistungen'" [subtitle]="'Ihre Zahnarztpraxis in Meerbusch'"></app-hero-image>-->
+
+
+<div class="team-grid-wrapper">
+    <app-quote
+        [text]="'Ein Team ist nicht eine Gruppe von Menschen, die zusammenarbeiten. Ein Team ist eine Gruppe von Menschen, die einander vertrauen.'"
+        [author]="'Simon Sinek'">
+    </app-quote>
+
+    <div class="team-grid">
+        <app-team-card
+            *ngFor="let member of team"
+            [name]="member.name"
+            [title]="member.title"
+            [imageUrl]="member.image"
+            [qualifications]="member.qualifications"
+            [showResumeButton]="!!member.resumeUrl"
+            [resumeUrl]="member.resumeUrl"
+        />
+    </div>
+</div>
+
+
