@@ -2,14 +2,14 @@
   max-width: 800px;
   margin-left: 50px;
   padding: 1.5rem 2rem;
-  border-left: 6px solid var(--p-card-color);
+  border-left: 6px solid #334155 !important;
   border-radius: 10px;
   position: relative;
 }
 
 .quote-text {
   font-size: 1.25rem;
-  color: var(--p-card-color);
+  color: #334155 !important;
   margin: 0 0 1rem 0;
   position: relative;
   padding-left: 1rem;
@@ -20,7 +20,7 @@
     position: absolute;
     left: -15px;
     top: -10px;
-    color: var(--p-card-color);
+    color: #334155 !important;
     font-family: serif;
   }
 }
@@ -28,27 +28,8 @@
 .quote-author {
   text-align: right;
   font-weight: 500;
-  color: var(--p-card-color);
+  color: #334155 !important;
   font-size: 1rem;
   font-style: normal;
   margin: 0;
-}
-
-@media (max-width: 600px) {
-  .quote-text {
-    color: white; /* Neue Farbe auf Mobile */
-
-    &::before { 
-        color: white;
-    }
-  }
-
-  .quote-container {
-    border-left: 6px solid white;
-  }
-
-  .quote-container,
-  .quote-author {
-    color: white;
-  }
 }

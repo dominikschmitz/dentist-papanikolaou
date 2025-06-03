@@ -30,6 +30,10 @@ export class Navbar implements AfterViewInit {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
+  closeMobileMenu() {
+  this.mobileMenuOpen = false;
+}
+
   ngAfterViewInit() {
     const sections = document.querySelectorAll('.section');
     console.log("sec", sections)

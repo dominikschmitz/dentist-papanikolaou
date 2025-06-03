@@ -10,12 +10,12 @@
   </div>
 
   <ul [class.open]="mobileMenuOpen">
-    <li><a routerLink="/start" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Start</a></li>
-    <li><a routerLink="/leistungen" routerLinkActive="active">Leistungen</a></li>
-    <li><a routerLink="/team" routerLinkActive="active">Team</a></li>
-    <li><a routerLink="/praxis" routerLinkActive="active">Praxis</a></li>
-    <li><a routerLink="/jobs" routerLinkActive="active">Jobs</a></li>
-    <li><a routerLink="/kontakt" routerLinkActive="active">Kontakt</a></li>
-    <li><a class="nav-button" href="https://www.doctolib.de/zahnmedizin/meerbusch/paschalis-papanikolaou/booking/new-patient?specialityId=1285&bookingFunnelSource=profile" target="_blank" rel="noopener noreferrer">Termin buchen</a></li>
+    <li><a routerLink="/start" routerLinkActive="active" (click)="closeMobileMenu()" [routerLinkActiveOptions]="{ exact: true }">Start</a></li>
+    <li><a routerLink="/leistungen" routerLinkActive="active" (click)="closeMobileMenu()">Leistungen</a></li>
+    <li><a routerLink="/team" routerLinkActive="active" (click)="closeMobileMenu()">Team</a></li>
+    <li><a routerLink="/praxis" routerLinkActive="active" (click)="closeMobileMenu()">Praxis</a></li>
+    <li><a routerLink="/jobs" routerLinkActive="active" (click)="closeMobileMenu()">Jobs</a></li>
+    <li><a routerLink="/kontakt" routerLinkActive="active" (click)="closeMobileMenu()">Kontakt</a></li>
+    <li><a class="nav-button" (click)="closeMobileMenu()" href="https://www.doctolib.de/zahnmedizin/meerbusch/paschalis-papanikolaou/booking/new-patient?specialityId=1285&bookingFunnelSource=profile" target="_blank" rel="noopener noreferrer">Termin buchen</a></li>
   </ul>
 </header>

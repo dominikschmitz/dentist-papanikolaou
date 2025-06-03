@@ -1,12 +1,17 @@
 
 
+.team-grid-container {
+ position: relative;
+  overflow-x: hidden;
+}
+
 .team-grid-wrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .team-grid-wrapper:before {
-    content: "";
+  content: "";
   position: absolute;
   top: 33%;
   left: -30%;
